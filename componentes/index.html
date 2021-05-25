@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <previsao-clima></previsao-clima>
+      <valor-acao></valor-acao>
+    </div>
+
+    <script type="module">
+      import PrevisaoClima from "./PrevisaoClima.js";
+      import ValorAcao from "./ValorAcao.js"
+
+      Vue.component("PrevisaoClima", PrevisaoClima);
+      Vue.component("ValorAcao", ValorAcao);
+
+      var app = new Vue({
+        el: "#app",
+        components: {
+          PrevisaoClima,
+          ValorAcao
+        },
+      });
+    </script>
+  </body>
+</html>
